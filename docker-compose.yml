@@ -1,0 +1,36 @@
+version: "2.8"
+services:
+  nginx:
+    container_name: effmob-nginx
+    hostname: effmob-nginx
+    build: ./nginx
+    volumes:
+      - ./nginx/conf.d/:/etc/nginx/conf.d/:ro
+    ports:
+      - "80:80"
+    restart: always
+    networks:
+      - app-network
+    healthcheck:
+      test: curl --fail 127.0.0.1:80 || exit 1
+      interval: 30s
+      retries: 2
+      start_period: 10s
+      timeout: 10s
+  app:
+    container_name: effmob-fastapi
+    hostname: effmob-fastapi
+    user: "1000:1000"
+    build: ./backend
+    restart: always
+    networks:
+      - app-network
+    healthcheck:
+      test: curl --fail 127.0.0.1:8080 || exit 1
+      interval: 30s
+      retries: 2
+      start_period: 10s
+      timeout: 10s
+networks:
+  app-network:
+    driver: bridge
