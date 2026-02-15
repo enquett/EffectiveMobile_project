@@ -2,7 +2,7 @@
 
 Балансировщик нагрузки - [nginx](https://nginx.org/ru/).\
 HTTP-сервер написан на Python с использованием [FastApi](https://fastapi.tiangolo.com/).\
-Контейнеризация - [docker](https://www.docker.com/).\
+Контейнеризация - [docker](https://www.docker.com/).
 
 ## Схема взаимодействия
 
