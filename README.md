@@ -1,8 +1,8 @@
 ## Список используемных технологий
 
-Балансировщик нагрузки - [nginx](https://nginx.org/ru/).
-HTTP-сервер написан на Python с использованием [FastApi](https://fastapi.tiangolo.com/).
-Контейнеризация - [docker](https://www.docker.com/).
+Балансировщик нагрузки - [nginx](https://nginx.org/ru/).\
+HTTP-сервер написан на Python с использованием [FastApi](https://fastapi.tiangolo.com/).\
+Контейнеризация - [docker](https://www.docker.com/).\
 
 ## Схема взаимодействия
 
@@ -16,7 +16,7 @@ Nginx доступен на хосте на 80 порту. При попытке
 ***Установка docker***
 
 Установка docker и docker compose описана в официальной документации - <https://docs.docker.com/manuals/>.
-В текущем описана установка Docker на Ubuntu 24.04 с использованием документации:
+В текущем файле описана установка Docker на Ubuntu 24.04 с использованием документации:
 Add Docker's official GPG key:
 ```
 sudo apt update
